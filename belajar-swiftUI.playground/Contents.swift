@@ -121,3 +121,34 @@ func getCaller(_ caller: CallerType) {
 }
 getCaller(.none)
 getCaller(.some(person: "Wopp"))
+
+//Struct
+struct Person {
+    var name: String
+    var color: String
+    func describe() {
+        print("\(name) likes a \(color)")
+    }
+}
+
+let angga = Person(name: "Angga", color: "Blue")
+angga.describe()
+
+//Class
+class Food {
+    var name: String
+    var price: Int
+    static var address = "Jonggol"
+    
+    init(name: String, price: Int) {
+        self.name = name
+        self.price = price
+    }
+    
+    func describe() {
+        print("The \(self.name) is Rp.\(self.price)")
+    }
+}
+let friedRice = Food(name: "Fried Rice", price: 20000)
+friedRice.describe()
+print(Food.address)
